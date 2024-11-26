@@ -3,7 +3,7 @@ const { api } = useAPI()
 export function searchMeals({ commit }, keyword) {
     api.get(`search.php?s=${keyword}`)
         .then(({ data }) => {
-        commit('setSearchedmeals', data.meals)
+        commit('setSearchedMeals', data.meals)
     })
 }
 export function searchMealsByLetter({ commit }, letter) {
